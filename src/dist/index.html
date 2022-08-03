@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - SVG Navigation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- beloved hamburger button -->
+<button aria-label="Toggle Navigation">
+  <svg viewBox="-50 -40 100 80" width="50" height="40">
+    <defs>
+      <path id="line" fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="round" d="M -40 0 h 80" />
+    </defs>
+    <g>
+      <g class="translate" transform="translate(0 -30)">
+        <g class="rotate" transform="rotate(-45)">
+          <use transform="rotate(45)" href="#line" />
+        </g>
+      </g>
+
+      <g class="rotate" transform="rotate(45)">
+        <use transform="rotate(-45)" href="#line" />
+      </g>
+
+      <g class="translate" transform="translate(0 30)">
+        <g class="rotate" transform="rotate(-45)">
+          <use transform="rotate(45)" href="#line" />
+        </g>
+      </g>
+    </g>
+  </svg>
+</button>
+
+<!-- navigation wrapping text elements within anchor elements -->
+<nav>
+  <svg viewBox="0 0 500 400" width="500" height="400">
+    <defs>
+      <path id="path" d="M -150 60 q 50 -20 100 0 t 100 0 100 0 100 0 100 0 100 0 100 0 100 0" fill="none" />
+    </defs>
+    <g transform="translate(0 0)">
+      <a href="#YOLO">
+        <text>
+          <textPath text-anchor="middle" href="#path" startOffset="0%">
+            YOLO
+          </textPath>
+        </text>
+      </a>
+    </g>
+    <g transform="translate(0 100)">
+      <a href="#LOADING">
+        <text>
+          <textPath text-anchor="middle" href="#path" startOffset="100%">
+            LOADING
+          </textPath>
+        </text>
+      </a>
+    </g>
+    <g transform="translate(0 200)">
+      <a href="#FICOU CURIOSO?">
+        <text>
+          <textPath text-anchor="middle" href="#path" startOffset="0%">
+            TA CURIOSO
+          </textPath>
+        </text>
+      </a>
+    </g>
+    <g transform="translate(0 300)">
+      <a href="#???">
+        <text>
+          <textPath text-anchor="middle" href="#path" startOffset="100%">
+            ???
+          </textPath>
+        </text>
+      </a>
+    </g>
+  </svg>
+</nav>
+<!-- partial -->
+  <script src='https://unpkg.com/animejs@3.1.0/lib/anime.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
